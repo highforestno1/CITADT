@@ -1,0 +1,230 @@
+@{
+    ViewData["Title"] = "Tin tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg-[#070b3b] py-8">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-white text-center">TIN TỨC</h1>
+        <div class="flex items-center justify-center mt-2">
+            <a href="/" class="text-white hover:text-[#ffc221]">Trang chủ</a>
+            <span class="mx-2 text-white">»</span>
+            <a href="/Home/News" >
+                <span class="text-[#ffc221]">Tin Tức</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto px-4 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tin tức nổi bật -->
+        <div class="lg:col-span-2">
+            <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Tin tức nổi bật</h2>
+
+            <!-- Bài viết nổi bật -->
+            <div class="mb-8">
+                <a href="#" class="block group">
+                    <div class="overflow-hidden rounded-lg mb-3">
+                        <img src="/img/new-tdtt2022.png" alt="Tin tức" class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">Hội thảo thể dục thể thao viên chức, người lao động 2025</h3>
+                </a>
+                <p class="text-gray-600 mt-2">
+                    <i class="fas fa-calendar-alt mr-2"></i>28/04/2023
+                </p>
+                <p class="mt-2 text-gray-700">
+                    Giải bóng đá mini - hội thi múa trong các hoạt động nhân dịp trong chương trình hội thảo thể dục thể mạc, người lao động năm 2025.
+                </p>
+                <a href="#" class="inline-block mt-3 text-blue-600 hover:text-blue-800 font-medium">
+                    Xem thêm <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- Danh sách tin tức -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Tin tức 1 -->
+                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <a href="#" class="block group">
+                        <div class="overflow-hidden h-48">
+                            <img src="/img/home-one/home-one-img1.jpg" alt="Tin tức" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">Bổ nhiệm ông Nguyễn Viết Tuyến giữ chức vụ Giám đốc trung tâm</h3>
+                            <p class="text-gray-600 text-sm">
+                                <i class="fas fa-calendar-alt mr-2"></i>15/03/2023
+                            </p>
+                            <p class="mt-2 text-gray-700 text-sm line-clamp-2">
+                                Chiều ngày 04/4, Trường Đại học Công nghiệp Hà Nội nhiệm vụ chức năng Quyết định số nhận...
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Tin tức 2 -->
+                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <a href="#" class="block group">
+                        <div class="overflow-hidden h-48">
+                            <img src="/img/blog/blog-img1.jpg" alt="Tin tức" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">HaUI đi đầu trong xu thế chuyển đổi số và quản trị thông minh</h3>
+                            <p class="text-gray-600 text-sm">
+                                <i class="fas fa-calendar-alt mr-2"></i>20/02/2023
+                            </p>
+                            <p class="mt-2 text-gray-700 text-sm line-clamp-2">
+                                Xu thế chuyển đổi số đang diễn ra trên thế giới, không chỉ là một lựa chọn mà đang trở thành...
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Tin tức 3 -->
+                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <a href="#" class="block group">
+                        <div class="overflow-hidden h-48">
+                            <img src="/img/trungtam/t67672.jpg" alt="Tin tức" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">Câu lạc bộ công nghệ thông tin (CNTT) các trường Đại học ban hành Quyết định</h3>
+                            <p class="text-gray-600 text-sm">
+                                <i class="fas fa-calendar-alt mr-2"></i>10/02/2023
+                            </p>
+                            <p class="mt-2 text-gray-700 text-sm line-clamp-2">
+                                Trên cơ sở đề xuất của Hiệp hội An toàn thông tin Việt Nam...
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Tin tức 4 -->
+                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <a href="#" class="block group">
+                        <div class="overflow-hidden h-48">
+                            <img src="/img/ai3.webp" alt="Tin tức" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">Chuyên gia Lê Công Thành: AI tạo sinh giống như siêu xe, cần xăng xe chính là dữ liệu</h3>
+                            <p class="text-gray-600 text-sm">
+                                <i class="fas fa-calendar-alt mr-2"></i>05/01/2023
+                            </p>
+                            <p class="mt-2 text-gray-700 text-sm line-clamp-2">
+                                Chia sẻ tại chương trình "Hội thảo toàn quốc về xây dựng dạy học..."
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Phân trang -->
+            <div class="flex justify-center mt-8">
+                <nav aria-label="Page navigation">
+                    <ul class="flex space-x-2">
+                        <li>
+                            <a href="#" class="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">3</a>
+                        </li>
+                        <li>
+                            <a href="#" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+            <!-- Tin nổi bật phải -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Tin tiêu điểm</h2>
+
+                <div class="space-y-4">
+                    <!-- Tin tiêu điểm 1 -->
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Tự Chủ Đại Học: Cơ hội cho thực hiện cam kết "100 cử nhân giỏi"</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>23/04/2022
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tin tiêu điểm 2 -->
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Phát động Chiến dịch làm sạch mã độc trên không gian mạng</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>10/03/2022
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tin tiêu điểm 3 -->
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Chủ đề trong năm CNTT: "Nhận thức và thực tiễn về ATM, Tài nguyên số"</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>05/03/2022
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video giới thiệu -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Video giới thiệu</h2>
+
+                <div class="rounded-lg overflow-hidden">
+                    <div class="relative pt-[56.25%]">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/orxSM5xiX0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="mt-4 text-center">
+                    <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                        Xem thêm video <i class="fas fa-play ml-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Thẻ tag -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Chủ đề</h2>
+
+                <div class="flex flex-wrap gap-2">
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Công nghệ</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Đào tạo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Chuyển đổi số</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Sinh viên</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Tuyển sinh</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Nghiên cứu</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Hội thảo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">AI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript cho trang tin tức -->
+<script>
+    // Các chức năng tương tác có thể được thêm vào đây nếu cần
+</script>
+

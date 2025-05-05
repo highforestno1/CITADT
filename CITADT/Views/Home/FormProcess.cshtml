@@ -1,0 +1,189 @@
+@{
+    ViewData["Title"] = "Quy trình, biểu mẫu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="bg-[#070b3b] py-8">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-white text-center">QUY TRÌNH, BIỂU MẪU</h1>
+        <div class="flex items-center justify-center mt-2">
+            <a href="/" class="text-white hover:text-[#ffc221]">Trang chủ</a>
+            <span class="mx-2 text-white">»</span>
+            <a href="/Home/FormProcess" >
+                <span class="text-[#ffc221]">Quy trình, biểu mẫu</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<section class="py-10">
+    <div class="container mx-auto px-4 py-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Nội dung chính: danh sách hướng dẫn -->
+            <div class="lg:col-span-2">
+                <!-- Danh sách hướng dẫn -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Hướng dẫn 1 -->
+                    <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <a href="#" class="block group">
+                            <div class="overflow-hidden h-48">
+                                <img src="/img/t85378.jpg" alt="Hướng dẫn sử dụng mạng LAN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">Phiếu yêu cầu giải quyết công việc</h3>
+                                <p class="text-gray-600 text-sm">
+                                    <i class="fas fa-calendar-alt mr-2"></i>02/07/2024
+                                </p>
+                                <p class="mt-2 text-gray-700 text-sm line-clamp-2">
+                                    Phiếu trình này được sử dụng cho tất cả các loại công việc trình BGH giải quyết, được lưu giữ tại đơn vị trình và gửi lưu trữ kèm theo hồ sơ công việc.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Hướng dẫn 2 -->
+                    <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <a href="#" class="block group">
+                            <div class="overflow-hidden h-48">
+                                <img src="/img/t85377.jpg" alt="Hướng dẫn kết nối Wifi DHHP-STAFFS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">Quy trình sửa chữa - bảo trì thiết bị tin học định kỳ</h3>
+                                <p class="text-gray-600 text-sm">
+                                    <i class="fas fa-calendar-alt mr-2"></i>03/07/2024
+                                </p>
+                                <p class="mt-2 text-gray-700 text-sm line-clamp-2">
+                                    Quy trình sửa chữa, bảo trì thiết bị tin học định kỳ.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Hướng dẫn 3 -->
+                    <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <a href="#" class="block group">
+                            <div class="overflow-hidden h-48">
+                                <img src="/img/t85376.jpg" alt="Hướng dẫn đảm bảo an toàn thông tin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">Quy trình sửa chữa bảo trì thiết bị tin học</h3>
+                                <p class="text-gray-600 text-sm">
+                                    <i class="fas fa-calendar-alt mr-2"></i>04/07/2024
+                                </p>
+                                <p class="mt-2 text-gray-700 text-sm line-clamp-2">
+                                    Quy trình sửa chữa bảo trì thiết bị tin học.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Hướng dẫn 4 -->
+                    <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <a href="#" class="block group">
+                            <div class="overflow-hidden h-48">
+                                <img src="/img/t85252.jpg" alt="Hướng dẫn sử dụng máy chiếu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">Biểu mẫu phục vụ đào tạo</h3>
+                                <p class="text-gray-600 text-sm">
+                                    <i class="fas fa-calendar-alt mr-2"></i>01/07/2024
+                                </p>
+                                <p class="mt-2 text-gray-700 text-sm line-clamp-2">
+                                    Biểu mẫu phục vụ đào tạo.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Phân trang -->
+                <div class="flex justify-center mt-8">
+                    <nav aria-label="Page navigation">
+                        <ul class="flex space-x-2">
+                            <li>
+                                <a href="#" class="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">3</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <div>
+                <!-- Tin tiêu điểm -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Tin tiêu điểm</h2>
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                                <img src="/img/maychieu.webp" alt="Hướng dẫn sử dụng máy chiếu" class="w-full h-full object-cover">
+                            </a>
+                            <div>
+                                <a href="#" class="block text-base font-medium hover:text-blue-600">Hướng dẫn sử dụng máy chiếu</a>
+                                <p class="text-gray-600 text-xs mt-1">
+                                    <i class="fas fa-calendar-alt mr-1"></i>01/07/2024
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                                <img src="/img/LAN.jpg" alt="Hướng dẫn sử dụng mạng LAN" class="w-full h-full object-cover">
+                            </a>
+                            <div>
+                                <a href="#" class="block text-base font-medium hover:text-blue-600">Hướng dẫn sử dụng mạng LAN</a>
+                                <p class="text-gray-600 text-xs mt-1">
+                                    <i class="fas fa-calendar-alt mr-1"></i>02/07/2024
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                                <img src="/img/wifi.jpg" alt="Hướng dẫn kết nối Wifi DHHP-STAFFS" class="w-full h-full object-cover">
+                            </a>
+                            <div>
+                                <a href="#" class="block text-base font-medium hover:text-blue-600">Hướng dẫn kết nối Wifi DHHP-STAFFS</a>
+                                <p class="text-gray-600 text-xs mt-1">
+                                    <i class="fas fa-calendar-alt mr-1"></i>03/07/2024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video giới thiệu -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Video giới thiệu</h2>
+                    <div class="rounded-lg overflow-hidden">
+                        <div class="relative pt-[56.25%]">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/orxSM5xiX0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                            Xem thêm video <i class="fas fa-play ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Thẻ tag -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Chủ đề</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Công nghệ</a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Hạ tầng mạng</a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Wifi</a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">An toàn thông tin</a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Thiết bị</a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Hướng dẫn</a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">LAN</a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Máy chiếu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

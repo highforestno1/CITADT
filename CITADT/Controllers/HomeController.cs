@@ -18,7 +18,56 @@ namespace CITADT.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult News1()
+        {
+            return View();
+        }
+
+        public IActionResult News()
+        {
+            return View();
+        }
+
+        public IActionResult Student()
+        {
+            return View();
+        }
+
+        public IActionResult MiningGuide()
+        {
+            return View();
+        }
+
+        public IActionResult FormProcess()
+        {
+            return View();
+        }
+
+        public IActionResult Training()
+        {
+            return View();
+        }
+
+        public IActionResult Organization()
+        {
+            return View();
+        }
+        public IActionResult Schedule()
+        {
+            return View();
+        }
+
+        public IActionResult FAQ()
+        {
+            return View();
+        }
+
+        public IActionResult Certificate()
         {
             return View();
         }

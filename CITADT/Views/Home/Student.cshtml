@@ -1,0 +1,255 @@
+@{
+    ViewData["Title"] = "Tra cứu thông tin sinh viên";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Page Header Banner -->
+<div class="bg-[#070b3b] py-8">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-white text-center">TRA CỨU THÔNG TIN SINH VIÊN</h1>
+        <div class="flex items-center justify-center mt-2">
+            <a href="/" class="text-white hover:text-[#ffc221]">Trang chủ</a>
+            <span class="mx-2 text-white">»</span>
+            <a href="/Home/Student" >
+                <span class="text-[#ffc221]">Tra cứu thông tin sinh viên</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Search Form Section -->
+<section class="py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-center mb-10">
+            <div class="w-full max-w-md">
+                <form class="flex">
+                    <input type="text" id="student_id" name="student_id" placeholder="Mã sinh viên" 
+                        class="w-full border border-gray-300 rounded  py-3 px-4 focus:outline-none focus:border-blue-500">
+                    <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded ml-2 rounded hover:bg-blue-600 transition-colors">
+                        Tra cứu
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Left Column - Student Information (Hidden until search) -->
+            <div class="md:col-span-2 hidden" id="studentInfo">
+                <div class="bg-white border border-gray-light rounded-md shadow-card overflow-hidden mb-8">
+                    <div class="bg-[#070b3b] text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">Thông tin sinh viên</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                            <div class="md:col-span-1 flex justify-center">
+                                <img src="/img/student-avatar.jpg" alt="Ảnh sinh viên" class="w-40 h-40 object-cover rounded-md">
+                            </div>
+                            <div class="md:col-span-2">
+                                <table class="w-full">
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 font-medium">Mã SV:</td>
+                                            <td class="py-2">SV12345</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 font-medium">Họ và tên:</td>
+                                            <td class="py-2">Nguyễn Văn A</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 font-medium">Ngày sinh:</td>
+                                            <td class="py-2">01/01/2000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 font-medium">Lớp:</td>
+                                            <td class="py-2">CNTT06.01</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 font-medium">Khóa học:</td>
+                                            <td class="py-2">K15 (2023-2025)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificates Information -->
+                <div class="bg-white border border-gray-light rounded-md shadow-card overflow-hidden mb-8">
+                    <div class="bg-[#070b3b] text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">Thông tin chứng chỉ</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white">
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th class="py-3 px-4 text-left font-medium">STT</th>
+                                        <th class="py-3 px-4 text-left font-medium">Mã CC</th>
+                                        <th class="py-3 px-4 text-left font-medium">Tên chứng chỉ</th>
+                                        <th class="py-3 px-4 text-left font-medium">Ngày cấp</th>
+                                        <th class="py-3 px-4 text-left font-medium">Kết quả</th>
+                                        <th class="py-3 px-4 text-left font-medium">Xếp loại</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="py-3 px-4">1</td>
+                                        <td class="py-3 px-4">CNTT01</td>
+                                        <td class="py-3 px-4">Ứng dụng CNTT cơ bản</td>
+                                        <td class="py-3 px-4">15/05/2024</td>
+                                        <td class="py-3 px-4">85/100</td>
+                                        <td class="py-3 px-4">Khá</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2</td>
+                                        <td class="py-3 px-4">CNTT02</td>
+                                        <td class="py-3 px-4">Ứng dụng CNTT nâng cao</td>
+                                        <td class="py-3 px-4">10/06/2024</td>
+                                        <td class="py-3 px-4">92/100</td>
+                                        <td class="py-3 px-4">Giỏi</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Schedule -->
+                <div class="bg-white border border-gray-light rounded-md shadow-card overflow-hidden">
+                    <div class="bg-[#070b3b] text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">Lịch học, lịch thi</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white">
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th class="py-3 px-4 text-left font-medium">STT</th>
+                                        <th class="py-3 px-4 text-left font-medium">Môn học</th>
+                                        <th class="py-3 px-4 text-left font-medium">Ngày học</th>
+                                        <th class="py-3 px-4 text-left font-medium">Giờ học</th>
+                                        <th class="py-3 px-4 text-left font-medium">Phòng học</th>
+                                        <th class="py-3 px-4 text-left font-medium">Giảng viên</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="py-3 px-4">1</td>
+                                        <td class="py-3 px-4">Tin học văn phòng</td>
+                                        <td class="py-3 px-4">Thứ 2, 4, 6</td>
+                                        <td class="py-3 px-4">8:00 - 11:30</td>
+                                        <td class="py-3 px-4">B304</td>
+                                        <td class="py-3 px-4">Nguyễn Văn B</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">2</td>
+                                        <td class="py-3 px-4">Đồ họa máy tính</td>
+                                        <td class="py-3 px-4">Thứ 3, 5</td>
+                                        <td class="py-3 px-4">13:30 - 17:00</td>
+                                        <td class="py-3 px-4">B401</td>
+                                        <td class="py-3 px-4">Trần Thị C</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+    <div class="grid grid-cols lg:grid-cols">
+        <!-- Bài viết chính -->
+        
+
+        <!-- Sidebar -->
+        <div>
+            <!-- Tin tiêu điểm -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Tin tiêu điểm</h2>
+                <div class="space-y-4">
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Tự Chủ Đại Học: Cơ hội cho thực hiện cam kết \"100 cử nhân giỏi\"</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>23/04/2022
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Phát động Chiến dịch làm sạch mã độc trên không gian mạng</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>10/03/2022
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Chủ đề trong năm CNTT: \"Nhận thức và thực tiễn về ATM, Tài nguyên số\"</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>05/03/2022
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video giới thiệu -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Video giới thiệu</h2>
+                <div class="rounded-lg overflow-hidden">
+                    <div class="relative pt-[56.25%]">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/orxSM5xiX0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                        Xem thêm video <i class="fas fa-play ml-1"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Thẻ tag -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Chủ đề</h2>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Công nghệ</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Đào tạo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Chuyển đổi số</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Sinh viên</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Tuyển sinh</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Nghiên cứu</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Hội thảo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">AI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+<!-- JavaScript for form functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const studentInfoSection = document.getElementById('studentInfo');
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // In a real application, this would make an AJAX request to fetch student data
+        
+        // For demonstration, we'll just show the hidden section
+        studentInfoSection.classList.remove('hidden');
+    });
+});
+</script> 

@@ -1,0 +1,266 @@
+@{
+    ViewData["Title"] = "Bài viết";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg-[#070b3b] py-8">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-white text-center">TIN TỨC</h1>
+        <div class="flex items-center justify-center mt-2">
+            <a href="/" class="text-white hover:text-[#ffc221]">Trang chủ</a>
+            <span class="mx-2 text-white">»</span>
+            <a href="/New" class="text-white hover:text-[#ffc221]">Tin Tức</a>
+            <span class="mx-2 text-white">»</span>
+            <span class="text-[#ffc221]">Chi tiết</span>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto px-4 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Bài viết chính -->
+        <div class="lg:col-span-2">
+            <h1 class="text-3xl font-bold text-[#070b3b] mb-4">Chuyên gia Lê Công Thành: AI tạo sinh giống như siêu xe, cần xăng xe chính là dữ liệu</h1>
+
+            <div class="flex items-center text-gray-600 mb-6">
+                <span class="mr-4"><i class="fas fa-calendar-alt mr-2"></i>15/03/2023</span>
+                <span><i class="fas fa-eye mr-2"></i>1250 lượt xem</span>
+            </div>
+
+            <div class="mb-8">
+                <img src="/img/ai-seminar.jpg" alt="Hội thảo AI" class="w-full rounded-lg mb-4">
+                <p class="text-sm text-gray-600 italic">Chuyên gia Lê Công Thành chia sẻ về AI tạo sinh trong hội thảo tại Trường Đại học Hải Phòng</p>
+            </div>
+
+            <div class="prose max-w-none">
+                <p class="mb-4">
+                    Chiều 14/3, tại Trường Đại học Hải Phòng, một buổi hội thảo chuyên đề về AI tạo sinh đã diễn ra thu hút đông đảo giảng viên và sinh viên tham gia. Chuyên gia Lê Công Thành, CEO Công ty Công nghệ DAITA, chuyên gia phát triển AI của Bộ KHCN, đã có những chia sẻ đầy giá trị về xu hướng phát triển và ứng dụng của công nghệ AI trong các lĩnh vực khác nhau.
+                </p>
+
+                <p class="mb-4">
+                    Trong bài phát biểu chính, ông Lê Công Thành đã nhấn mạnh: <span class="font-semibold">"AI tạo sinh giống như siêu xe, cần xăng xe chính là dữ liệu. Để AI tạo sinh hoạt động hiệu quả và đem lại giá trị, cần phải có lượng dữ liệu đủ lớn và chất lượng."</span>
+                </p>
+
+                <p class="mb-4">
+                    Theo ông Thành, hiện nay AI tạo sinh (Generative AI) đang trở thành một trong những công nghệ đột phá nhất, với khả năng tạo ra nội dung mới dựa trên dữ liệu đã được học. Các ứng dụng của AI tạo sinh đã và đang dần trở nên quen thuộc với người dùng thông qua các công cụ như ChatGPT, DALL-E, Midjourney,...
+                </p>
+
+                <img src="/img/ai-presentation.jpg" alt="Trình bày về AI" class="w-full rounded-lg my-6">
+
+                <p class="mb-4">
+                    Những thách thức lớn nhất đối với việc phát triển AI tạo sinh tại Việt Nam hiện nay là nguồn dữ liệu còn hạn chế, đặc biệt là dữ liệu tiếng Việt chất lượng cao. "Chúng ta có thể phát triển các mô hình AI tốt, nhưng nếu không có dữ liệu huấn luyện phù hợp, những mô hình này sẽ không thể phát huy hết tiềm năng," ông Thành nhấn mạnh.
+                </p>
+
+                <p class="mb-4">
+                    Ông cũng chia sẻ về các dự án AI đang được phát triển tại công ty của mình, bao gồm hệ thống xử lý ngôn ngữ tự nhiên tiếng Việt, có khả năng hiểu và phản hồi các câu hỏi phức tạp với độ chính xác cao.
+                </p>
+
+                <div class="bg-blue-50 p-4 rounded-lg my-6">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Bốn thách thức lớn đối với AI tạo sinh tại Việt Nam</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Thiếu nguồn dữ liệu tiếng Việt chất lượng cao để huấn luyện mô hình</li>
+                        <li>Hạn chế về nguồn lực tính toán và cơ sở hạ tầng</li>
+                        <li>Thiếu nhân lực có chuyên môn về AI, đặc biệt là AI tạo sinh</li>
+                        <li>Khung pháp lý chưa hoàn thiện cho việc phát triển và ứng dụng AI</li>
+                    </ul>
+                </div>
+
+                <p class="mb-4">
+                    Phát biểu tại hội thảo, TS. Phan Đăng Hưng, Giám đốc Trung tâm Ứng dụng Công nghệ thông tin và Chuyển đổi số (CITADT) của Trường Đại học Hải Phòng, cho biết: "Chúng tôi định hướng đẩy mạnh nghiên cứu và ứng dụng AI trong các hoạt động giảng dạy và học tập. Hội thảo hôm nay là một bước quan trọng giúp sinh viên và giảng viên tiếp cận với các xu hướng công nghệ mới nhất."
+                </p>
+
+                <img src="/img/audience.jpg" alt="Khán giả tại hội thảo" class="w-full rounded-lg my-6">
+
+                <p class="mb-4">
+                    Trong phần hỏi đáp, nhiều sinh viên đã bày tỏ quan tâm về cơ hội việc làm trong lĩnh vực AI tạo sinh. Ông Lê Công Thành cho biết nhu cầu nhân lực trong lĩnh vực này đang tăng cao, tuy nhiên yêu cầu về kiến thức và kỹ năng cũng ngày càng khắt khe.
+                </p>
+
+                <p class="mb-4">
+                    "Để có thể làm việc trong lĩnh vực AI tạo sinh, sinh viên cần trang bị kiến thức vững vàng về toán học, thống kê, lập trình và xử lý dữ liệu. Đồng thời, việc không ngừng cập nhật kiến thức và thực hành là vô cùng quan trọng trong lĩnh vực phát triển nhanh như AI," ông Thành chia sẻ.
+                </p>
+
+                <div class="bg-gray-100 p-4 rounded-lg my-6">
+                    <h3 class="text-xl font-bold mb-2">Thông tin thêm về hội thảo:</h3>
+                    <p>- Thời gian: 14h00, ngày 14/3/2023</p>
+                    <p>- Địa điểm: Hội trường B1, Trường Đại học Hải Phòng</p>
+                    <p>- Đơn vị tổ chức: Trung tâm Ứng dụng Công nghệ thông tin và Chuyển đổi số (CITADT)</p>
+                </div>
+
+                <p class="mb-4">
+                    Buổi hội thảo kết thúc với nhiều ý kiến tích cực từ người tham dự. Đây được xem là một hoạt động ý nghĩa, góp phần nâng cao nhận thức và kiến thức về AI tạo sinh cho cộng đồng đại học.
+                </p>
+            </div>
+
+            <!-- Tags -->
+            <div class="mt-8 pt-4 border-t">
+                <div class="flex flex-wrap gap-2">
+                    <span class="font-semibold">Từ khóa:</span>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">AI</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Trí tuệ nhân tạo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Hội thảo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Công nghệ</a>
+                </div>
+            </div>
+
+            <!-- Chia sẻ -->
+            <div class="mt-4">
+                <div class="flex items-center gap-3">
+                    <span class="font-semibold">Chia sẻ:</span>
+                    <a href="#" class="text-blue-600 hover:text-blue-800">
+                        <i class="fab fa-facebook-square text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600">
+                        <i class="fab fa-twitter-square text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-red-600 hover:text-red-800">
+                        <i class="fas fa-envelope-square text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bài viết liên quan -->
+            <div class="mt-10">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Bài viết liên quan</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+                    <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <a href="#" class="block group">
+                            <div class="overflow-hidden h-48">
+                                <img src="/img/tech-seminar.jpg" alt="Tin tức" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">Hội thảo "An toàn bảo mật thông tin trên không gian mạng"</h3>
+                                <p class="text-gray-600 text-sm">
+                                    <i class="fas fa-calendar-alt mr-2"></i>20/02/2023
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <a href="#" class="block group">
+                            <div class="overflow-hidden h-48">
+                                <img src="/img/digital-transform.jpg" alt="Tin tức" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">HaUI đi đầu trong xu thế chuyển đổi số và quản trị thông minh</h3>
+                                <p class="text-gray-600 text-sm">
+                                    <i class="fas fa-calendar-alt mr-2"></i>05/01/2023
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+            <!-- Tin mới nhất -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Tin mới nhất</h2>
+
+                <div class="space-y-4">
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/tech-news1.jpg" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Hội thảo thể dục thể thao viên chức, người lao động 2025</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>28/04/2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/tech-news2.jpg" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Bổ nhiệm ông Nguyễn Viết Tuyến giữ chức vụ Giám đốc trung tâm</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>15/03/2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/tech-news3.jpg" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Cấu lạc bộ CNTT các trường Đại học ban hành Quyết định số 131</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>10/02/2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/tech-news4.jpg" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Hội diễn nghệ thuật quần chúng cán bộ, viên chức năm 2023</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>05/01/2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/tech-news5.jpg" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Đại hội Công đoàn bộ phận Trung tâm Công nghệ thông tin</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>30/12/2022
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video giới thiệu -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Video giới thiệu</h2>
+
+                <div class="rounded-lg overflow-hidden">
+                    <div class="relative pt-[56.25%]">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="mt-4 text-center">
+                    <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                        Xem thêm video <i class="fas fa-play ml-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Thẻ tag -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Chủ đề</h2>
+
+                <div class="flex flex-wrap gap-2">
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Công nghệ</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Đào tạo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Chuyển đổi số</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Sinh viên</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Tuyển sinh</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Nghiên cứu</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Hội thảo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">AI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript cho trang tin tức -->
+<script>
+    // Các chức năng tương tác có thể được thêm vào đây nếu cần
+</script>
+

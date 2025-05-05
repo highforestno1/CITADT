@@ -1,0 +1,133 @@
+@{
+    ViewData["Title"] = "Lịch học";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg-[#070b3b] py-8">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-white text-center">CHƯƠNG TRÌNH ĐÀO TẠO</h1>
+        <div class="flex items-center justify-center mt-2">
+            <a href="/" class="text-white hover:text-[#ffc221]">Trang chủ</a>
+            <span class="mx-2 text-white">»</span>
+            <a href="/Home/Schedule">
+            <span class="text-[#ffc221]">Lịch học</span>
+
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto px-4 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Nội dung chính -->
+        <div class="lg:col-span-2 bg-white rounded-lg shadow p-8">
+            <h2 class="text-2xl font-bold mb-6 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Lịch học</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full border text-center">
+                    <thead class="bg-[#070b3b] text-white">
+                        <tr>
+                            <th class="px-4 py-2 border">Thứ</th>
+                            <th class="px-4 py-2 border">Ngày</th>
+                            <th class="px-4 py-2 border">Môn học</th>
+                            <th class="px-4 py-2 border">Giảng viên</th>
+                            <th class="px-4 py-2 border">Phòng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border px-4 py-2">Hai</td>
+                            <td class="border px-4 py-2">01/07/2024</td>
+                            <td class="border px-4 py-2">Lập trình Web</td>
+                            <td class="border px-4 py-2">Nguyễn Văn A</td>
+                            <td class="border px-4 py-2">B302</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Ba</td>
+                            <td class="border px-4 py-2">02/07/2024</td>
+                            <td class="border px-4 py-2">Cơ sở dữ liệu</td>
+                            <td class="border px-4 py-2">Trần Thị B</td>
+                            <td class="border px-4 py-2">B303</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Tư</td>
+                            <td class="border px-4 py-2">03/07/2024</td>
+                            <td class="border px-4 py-2">Mạng máy tính</td>
+                            <td class="border px-4 py-2">Lê Văn C</td>
+                            <td class="border px-4 py-2">B304</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Sidebar -->
+        <div>
+            <!-- Tin tiêu điểm -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Tin tiêu điểm</h2>
+                <div class="space-y-4">
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Tự Chủ Đại Học: Cơ hội cho thực hiện cam kết \"100 cử nhân giỏi\"</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>23/04/2022
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Phát động Chiến dịch làm sạch mã độc trên không gian mạng</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>10/03/2022
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Chủ đề trong năm CNTT: \"Nhận thức và thực tiễn về ATM, Tài nguyên số\"</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>05/03/2022
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video giới thiệu -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Video giới thiệu</h2>
+                <div class="rounded-lg overflow-hidden">
+                    <div class="relative pt-[56.25%]">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/orxSM5xiX0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                        Xem thêm video <i class="fas fa-play ml-1"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Thẻ tag -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Chủ đề</h2>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Công nghệ</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Đào tạo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Chuyển đổi số</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Sinh viên</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Tuyển sinh</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Nghiên cứu</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Hội thảo</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">AI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

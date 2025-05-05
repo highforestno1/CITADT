@@ -1,0 +1,137 @@
+@{
+    ViewData["Title"] = "Câu hỏi thường gặp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg-[#070b3b] py-8">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-white text-center">CÂU HỎI THƯỜNG GẶP</h1>
+        <div class="flex items-center justify-center mt-2">
+            <a href="/" class="text-white hover:text-[#ffc221]">Trang chủ</a>
+            <span class="mx-2 text-white">»</span>
+            <a href="/Home/FAQ" >
+                            <span class="text-[#ffc221]">Câu hỏi thường gặp</span>
+
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto px-4 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Nội dung chính: danh sách câu hỏi -->
+        <div class="lg:col-span-2">
+            <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Các câu hỏi thường gặp</h2>
+            <!-- FAQ Item 1 -->
+            <div class="mb-6 border rounded-lg shadow-sm p-6 bg-white">
+                <h3 class="text-lg font-bold mb-2 text-blue-700">Làm thế nào để kết nối Wifi DHHP-STAFFS?</h3>
+                <p class="text-gray-700">Bạn cần đăng nhập bằng tài khoản được cấp bởi nhà trường, sau đó làm theo hướng dẫn tại mục Hướng dẫn sử dụng Wifi trên website.</p>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="mb-6 border rounded-lg shadow-sm p-6 bg-white">
+                <h3 class="text-lg font-bold mb-2 text-blue-700">Tôi quên mật khẩu email trường, phải làm sao?</h3>
+                <p class="text-gray-700">Bạn vui lòng liên hệ phòng CNTT hoặc gửi yêu cầu qua form bên phải để được hỗ trợ cấp lại mật khẩu.</p>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="mb-6 border rounded-lg shadow-sm p-6 bg-white">
+                <h3 class="text-lg font-bold mb-2 text-blue-700">Làm sao để sử dụng máy chiếu trong phòng học?</h3>
+                <p class="text-gray-700">Bạn có thể xem hướng dẫn chi tiết tại mục Hướng dẫn sử dụng máy chiếu hoặc liên hệ trực tiếp bộ phận kỹ thuật.</p>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="mb-6 border rounded-lg shadow-sm p-6 bg-white">
+                <h3 class="text-lg font-bold mb-2 text-blue-700">Tôi muốn đăng ký tài khoản mạng LAN?</h3>
+                <p class="text-gray-700">Vui lòng gửi thông tin cá nhân và lý do sử dụng đến phòng CNTT hoặc sử dụng form liên hệ bên phải.</p>
+            </div>
+            <!-- Thêm các câu hỏi khác nếu cần -->
+        </div>
+        <!-- Sidebar -->
+        <div>
+            <!-- Gửi câu hỏi liên hệ -->
+            <div class="mb-8 bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Gửi câu hỏi cho chúng tôi</h2>
+                <form method="post" action="mailto:citadt@dhhp.edu.vn" enctype="text/plain">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Họ và tên</label>
+                        <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="question" class="block text-sm font-medium text-gray-700 mb-1">Câu hỏi</label>
+                        <textarea id="question" name="question" rows="4" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-faq-submit">Gửi câu hỏi</button>
+                </form>
+            </div>
+            <!-- Tin tiêu điểm -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Tin tiêu điểm</h2>
+                <div class="space-y-4">
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/maychieu.webp" alt="Hướng dẫn sử dụng máy chiếu" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Hướng dẫn sử dụng máy chiếu</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>01/07/2024
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/LAN.jpg" alt="Hướng dẫn sử dụng mạng LAN" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Hướng dẫn sử dụng mạng LAN</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>02/07/2024
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/wifi.jpg" alt="Hướng dẫn kết nối Wifi DHHP-STAFFS" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Hướng dẫn kết nối Wifi DHHP-STAFFS</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>03/07/2024
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video giới thiệu -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Video giới thiệu</h2>
+                <div class="rounded-lg overflow-hidden">
+                    <div class="relative pt-[56.25%]">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/orxSM5xiX0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                        Xem thêm video <i class="fas fa-play ml-1"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Thẻ tag -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Chủ đề</h2>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Công nghệ</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Hạ tầng mạng</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Wifi</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">An toàn thông tin</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Thiết bị</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Hướng dẫn</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">LAN</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-blue-600 hover:text-white transition-colors">Máy chiếu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

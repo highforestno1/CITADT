@@ -1,0 +1,113 @@
+@{
+    ViewData["Title"] = "Cơ cấu tổ chức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg-[#070b3b] py-8">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-white text-center">GIỚI THIỆU</h1>
+        <div class="flex items-center justify-center mt-2">
+            <a href="/" class="text-white hover:text-[#ffc221]">Trang chủ</a>
+            <span class="mx-2 text-white">»</span>
+            <span class="text-[#ffc221]">Cơ cấu tổ chức</span>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto px-4 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Nội dung chính -->
+        <div class="lg:col-span-2 bg-white rounded-lg shadow p-8">
+            <h2 class="text-2xl font-bold mb-6 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Cơ cấu tổ chức</h2>
+            <div class="flex flex-col items-center mb-8">
+                <!-- Sơ đồ tổ chức dạng bảng -->
+                <div class="mb-4">
+                    <div class="flex flex-col items-center">
+                        <div class="border px-6 py-2 font-semibold uppercase">GIÁM ĐỐC</div>
+                        <div class="border-l-2 h-4"></div>
+                        <div class="border px-6 py-2 font-semibold uppercase">PHÓ GIÁM ĐỐC</div>
+                        <div class="border-l-2 h-4"></div>
+                        <div class="flex flex-row gap-2">
+                            <div class="border px-3 py-2 text-center uppercase">Bộ môn Tin học ứng dụng</div>
+                            <div class="border px-3 py-2 text-center uppercase">Tổ quản trị Ứng dụng</div>
+                            <div class="border px-3 py-2 text-center uppercase">Tổ Quản trị mạng</div>
+                            <div class="border px-3 py-2 text-center uppercase">Tổ Đảm bảo an toàn thông tin</div>
+                            <div class="border px-3 py-2 text-center uppercase">Tổ Hành chính</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-gray-800 text-base" style="line-height: 2;">
+                <h3 class="font-bold mb-2">* Ban lãnh đạo:</h3>
+                <ul class="mb-4">
+                    <li><b>Giám đốc:</b> TS. Nguyễn Ngọc Khương<br>Điện thoại: 091.22.1084, Email: khuongnn@dhhp.edu.vn</li>
+                    <li><b>Phó Giám đốc:</b> ThS. Nguyễn Trung Kiên<br>Điện thoại: 023.765.9121, Email: kiennt@dhhp.edu.vn</li>
+                </ul>
+                <h3 class="font-bold mb-2">* Các tổ/bộ môn trực thuộc:</h3>
+                <ul class="mb-4">
+                    <li><b>Bộ môn Tin học ứng dụng:</b> Trưởng bộ môn: ThS.Bùi Văn Tâm <br>Điện thoại: 023.765.9121, Email: tambv@dhhp.edu.vn</li>
+                    <li><b>Tổ Quản trị ứng dụng:</b> Tổ trưởng: Đinh Công Tân<br>Điện thoại: 023.765.9121, Email: tandc@dhhp.edu.vn</li>
+                    <li><b>Tổ Quản trị mạng:</b> Tổ trưởng: ThS. Thành<br>Điện thoại: 023.765.9121, Email: vuviethai@dhhp.edu.vn</li>
+                    <li><b>Tổ Đảm bảo an toàn thông tin:</b> Tổ trưởng: ThS. Nguyễn Trọng Đại<br>Điện thoại: 023.765.9121, Email: daint@dhhp.edu.vn</li>
+                    <li><b>Tổ Hành chính:</b> Tổ trưởng: ThS. Vũ Mạnh Cường<br>Điện thoại: 023.765.9121, Email: thuhuong@dhhp.edu.vn</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Sidebar -->
+        <div>
+            <!-- Tin tiêu điểm -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Tiêu điểm</h2>
+                <div class="space-y-4">
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/daotao.png" alt="Đào tạo CNTT" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Đào tạo kỹ năng CNTT</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>2024
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/quy trinh.png" alt="Chuyển đổi số" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Dự án chuyển đổi số</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>2024
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
+                            <img src="/img/maudenghi.png" alt="Hợp tác công nghệ" class="w-full h-full object-cover">
+                        </a>
+                        <div>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Hợp tác & chuyển giao</a>
+                            <p class="text-gray-600 text-xs mt-1">
+                                <i class="fas fa-calendar-alt mr-1"></i>2024
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video giới thiệu -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Video giới thiệu</h2>
+                <div class="rounded-lg overflow-hidden">
+                    <div class="relative pt-[56.25%]">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/orxSM5xiX0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                        Xem thêm video <i class="fas fa-play ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1324,3 +1324,27 @@ li {
 footer .container > div:first-child > div > div:not(:last-child) {
   border-right: 1px solid rgba(0, 113, 220, 0.4);
 }
+
+/* Nút gửi câu hỏi đẹp cho FAQ */
+.btn-faq-submit {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #0071dc 0%, #070b3b 100%);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 113, 220, 0.10);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+.btn-faq-submit:hover, .btn-faq-submit:focus {
+  background: linear-gradient(90deg, #ffc221 0%, #0071dc 100%);
+  color: #070b3b;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 113, 220, 0.18);
+  outline: none;
+}
