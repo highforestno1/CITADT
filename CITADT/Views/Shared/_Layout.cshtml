@@ -36,7 +36,7 @@
   <!-- Top Bar -->
   <div class="bg-[#070b3b] text-white">
     <div class="container mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center">
-      <div class="text-sm font-medium">TRƯỜNG ĐẠI HỌC HẢI PHÒNG</div>
+      <div class="text-sm  font-medium"><p class=" font-bold">TRƯỜNG ĐẠI HỌC HẢI PHÒNG</p></div>
       <div class="flex items-center space-x-4">
         <div class="flex items-center space-x-2">
           <a href="home" class="w-7 h-7 rounded-full flex items-center justify-center transition-colors">
@@ -115,62 +115,62 @@
         <nav class="hidden md:flex items-center space-x-4">
           <div class="relative group">
             <a href="/Home/About"
-              class="flex items-center  py-2 uppercase font-medium hover:text-primary-light transition-colors">
-             <p class="text-[#252525]">Giới thiệu</p>
+              class="flex items-center justify-end py-2 uppercase font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
+              <p class="text-[#252525] group-hover:text-blue-500 transition-colors">Giới thiệu</p>
               <img src="/img/dropdown.png" alt="Dropdown" class="ml-1 w-3">
             </a>
-            <div class="absolute hidden group-hover:block bg-white shadow-md p-2 z-10 min-w-40">
-              <a href="/Home/About" class="block py-2 uppercase hover:bg-gray-100"><p class="text-[#252525]">Giới thiệu chung</p></a>
-              <a href="/Home/Organization" class="block uppercase py-2 hover:bg-gray-100"><p class="text-[#252525]">Cơ cấu tổ chức</p></a>
+            <div class="absolute hidden group-hover:block bg-white shadow-md pl-2 pr-2 pt-2 z-10 min-w-50">
+              <a href="/Home/About" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center "><p class="text-[#252525] font-bold whitespace-nowrap">Giới thiệu chung</p></a>
+              <a href="/Home/Organization" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Cơ cấu tổ chức</p></a>
             </div>
           </div>
           <div class="relative group">
             <a href="/Home/Training"
-              class="flex items-center  py-2 uppercase font-medium hover:text-primary-light transition-colors">
-              <p class="text-[#252525]">Đào tạo</p>
+              class="flex items-center py-2 uppercase font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
+              <p class="text-[#252525] group-hover:text-blue-500 transition-colors">Đào tạo</p>
               <img src="/img/dropdown.png" alt="Dropdown" class="ml-1 w-3">
             </a>
-            <div class="absolute hidden group-hover:block bg-white shadow-md p-2 z-10 min-w-40">
-              <a href="/Home/Training" class="block uppercase py-2 hover:bg-gray-100"><p class="text-[#252525]">Chương trình đào tạo</p></a>
-              <a href="/Home/Schedule" class="block uppercase py-2 hover:bg-gray-100"><p class="text-[#252525]">Lịch học</p></a>
+            <div class="absolute hidden group-hover:block bg-white shadow-md pl-2 pr-2 pt-2 z-10 min-w-40">
+              <a href="/Home/Training" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Chương trình đào tạo</p></a>
+              <a href="/Home/TrainingProgramme" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Kế hoạch đào tạo</p></a>
             </div>
           </div>
           <div class="relative group">
             <a href="/Home/Student"
-              class="flex items-center  py-2 uppercase font-medium hover:text-primary-light transition-colors">
-              <p class="text-[#252525]">Sinh viên</p>
+              class="flex items-center py-2 uppercase font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
+              <p class="text-[#252525] group-hover:text-blue-500 transition-colors">Sinh viên</p>
               <img src="/img/dropdown.png" alt="Dropdown" class="ml-1 w-3">
             </a>
-            <div class="absolute hidden group-hover:block bg-white shadow-md p-2 z-10 min-w-40">
-              <a href="/Home/Student" class="block uppercase py-2 hover:bg-gray-100"><p class="text-[#252525]">Tra cứu điểm</p></a>
-              <a href="/Home/Certificate" class="block uppercase py-2 hover:bg-gray-100"><p class="text-[#252525]">Chứng chỉ</p></a>
+            <div class="absolute hidden group-hover:block bg-white shadow-md pl-2 pr-2 pt-2 z-10 min-w-40">
+              <a href="/Home/Student" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Tra cứu sinh viên</p></a>
+              <a href="/Home/Certificate" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Tra cứu chứng chỉ</p></a>
             </div>
           </div>
           <div class="relative group">
             <a href="/Home/MiningGuide"
-              class="flex items-center  py-2 uppercase font-medium hover:text-primary-light transition-colors">
-              <p class="text-[#252525]">Hướng dẫn</p>
+              class="flex items-center py-2 uppercase font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
+              <p class="text-[#252525] group-hover:text-blue-500 transition-colors">Hướng dẫn</p>
               <img src="/img/dropdown.png" alt="Dropdown" class="ml-1 w-3">
             </a>
-            <div class="absolute hidden group-hover:block bg-white shadow-md p-2 z-10 min-w-40">
-              <a href="/Home/MiningGuide" class="block uppercase py-2 hover:bg-gray-100"><p class="text-[#252525]">Hướng dẫn sử dụng</p></a>
-              <a href="/Home/FAQ" class="block uppercase py-2 hover:bg-gray-100"><p class="text-[#252525]">Câu hỏi thường gặp</p></a>
+            <div class="absolute hidden group-hover:block bg-white shadow-md pl-2 pr-2 pt-2 z-10 min-w-40">
+              <a href="/Home/MiningGuide" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Hướng dẫn sử dụng</p></a>
+              <a href="/Home/FAQ" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Câu hỏi thường gặp</p></a>
             </div>
           </div>
           <a href="/Home/FormProcess"
-            class="py-2 uppercase font-medium hover:text-primary-light transition-colors uppercase">
-            <p class="text-[#252525]">Quy trình - Biểu mẫu</p>
+            class="py-2 uppercase font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
+            <p class="text-[#252525] hover:text-blue-500 transition-colors">Quy trình - Biểu mẫu</p>
           </a>
         </nav>
       </div>
 
       <!-- Mobile navbar -->
       <div id="mobile-menu" class="md:hidden hidden pb-4">
-        <a href="/Home/About" class="block py-2  hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Giới thiệu chung</p></a>
-        <a href="/Home/Organization" class="block py-2  hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Cơ cấu tổ chức</p></a>
-        <a href="/Home/Training" class="block py-2  hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Đào tạo</p></a>
-        <a href="/Home/Schedule" class="block py-2  hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Lịch học</p></a>
-        <a href="/Home/Student" class="block py-2  hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Sinh viên</p></a>
+        <a href="/Home/About" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Giới thiệu chung</p></a>
+        <a href="/Home/Organization" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Cơ cấu tổ chức</p></a>
+        <a href="/Home/Training" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Đào tạo</p></a>
+        <a href="/Home/TrainingProgramme" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Lịch học</p></a>
+        <a href="/Home/Student" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Sinh viên</p></a>
         <a href="/Home/MiningGuide" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Hướng dẫn</p></a>
         <a href="/Home/FAQ" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Câu hỏi thường gặp</p></a>
         <a href="/Home/FormProcess" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Quy trình - Biểu mẫu</p></a>

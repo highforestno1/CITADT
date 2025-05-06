@@ -24,7 +24,7 @@
         <div class="flex justify-center mb-10">
             <div class="w-full max-w-md">
                 <form class="flex">
-                    <input type="text" id="student_id" name="student_id" placeholder="Mã sinh viên" 
+                    <input type="text" id="student_id" name="student_id" placeholder="Mã sinh viên"
                         class="w-full border border-gray-300 rounded  py-3 px-4 focus:outline-none focus:border-blue-500">
                     <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded ml-2 rounded hover:bg-blue-600 transition-colors">
                         Tra cứu
@@ -42,9 +42,6 @@
                     </div>
                     <div class="p-6">
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                            <div class="md:col-span-1 flex justify-center">
-                                <img src="/img/student-avatar.jpg" alt="Ảnh sinh viên" class="w-40 h-40 object-cover rounded-md">
-                            </div>
                             <div class="md:col-span-2">
                                 <table class="w-full">
                                     <tbody>
@@ -158,10 +155,10 @@
                 </div>
             </div>
 
-            
+
     <div class="grid grid-cols lg:grid-cols">
         <!-- Bài viết chính -->
-        
+
 
         <!-- Sidebar -->
         <div>
@@ -171,10 +168,10 @@
                 <div class="space-y-4">
                     <div class="flex gap-3">
                         <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                            <img src="/img/new1.jpg" alt="Tin tức" class="w-full h-full object-cover">
                         </a>
                         <div>
-                            <a href="#" class="block text-base font-medium hover:text-blue-600">Tự Chủ Đại Học: Cơ hội cho thực hiện cam kết \"100 cử nhân giỏi\"</a>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Tự Chủ Đại Học: Cơ hội cho thực hiện cam kết "100 cử nhân giỏi"</a>
                             <p class="text-gray-600 text-xs mt-1">
                                 <i class="fas fa-calendar-alt mr-1"></i>23/04/2022
                             </p>
@@ -182,7 +179,7 @@
                     </div>
                     <div class="flex gap-3">
                         <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                            <img src="/img/talk-bg2.jpg" alt="Tin tức" class="w-full h-full object-cover">
                         </a>
                         <div>
                             <a href="#" class="block text-base font-medium hover:text-blue-600">Phát động Chiến dịch làm sạch mã độc trên không gian mạng</a>
@@ -193,10 +190,10 @@
                     </div>
                     <div class="flex gap-3">
                         <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                            <img src="/img/ai3.webp" alt="Tin tức" class="w-full h-full object-cover">
                         </a>
                         <div>
-                            <a href="#" class="block text-base font-medium hover:text-blue-600">Chủ đề trong năm CNTT: \"Nhận thức và thực tiễn về ATM, Tài nguyên số\"</a>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Chủ đề trong năm CNTT: "Nhận thức và thực tiễn về ATM, Tài nguyên số"</a>
                             <p class="text-gray-600 text-xs mt-1">
                                 <i class="fas fa-calendar-alt mr-1"></i>05/03/2022
                             </p>
@@ -243,13 +240,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const studentInfoSection = document.getElementById('studentInfo');
-    
+
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         // In a real application, this would make an AJAX request to fetch student data
-        
+
         // For demonstration, we'll just show the hidden section
         studentInfoSection.classList.remove('hidden');
     });
 });
-</script> 
+</script>

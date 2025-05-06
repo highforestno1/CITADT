@@ -57,7 +57,7 @@ namespace CITADT.Controllers
         {
             return View();
         }
-        public IActionResult Schedule()
+        public IActionResult TrainingProgramme()
         {
             return View();
         }
