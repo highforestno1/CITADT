@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Lịch học";
+    ViewData["Title"] = "Chương trình đào tạo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -9,9 +9,8 @@
         <div class="flex items-center justify-center mt-2">
             <a href="/" class="text-white hover:text-[#ffc221]">Trang chủ</a>
             <span class="mx-2 text-white">»</span>
-            <a href="/Home/Schedule">
-            <span class="text-[#ffc221]">Lịch học</span>
-
+            <a href="/Home/TrainingProgramme">
+                <span class="text-[#ffc221]">Kế hoạch đào tạo</span>
             </a>
         </div>
     </div>
@@ -21,44 +20,43 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Nội dung chính -->
         <div class="lg:col-span-2 bg-white rounded-lg shadow p-8">
-            <h2 class="text-2xl font-bold mb-6 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Lịch học</h2>
-            <div class="overflow-x-auto">
-                <table class="min-w-full border text-center">
-                    <thead class="bg-[#070b3b] text-white">
-                        <tr>
-                            <th class="px-4 py-2 border">Thứ</th>
-                            <th class="px-4 py-2 border">Ngày</th>
-                            <th class="px-4 py-2 border">Môn học</th>
-                            <th class="px-4 py-2 border">Giảng viên</th>
-                            <th class="px-4 py-2 border">Phòng</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border px-4 py-2">Hai</td>
-                            <td class="border px-4 py-2">01/07/2024</td>
-                            <td class="border px-4 py-2">Lập trình Web</td>
-                            <td class="border px-4 py-2">Nguyễn Văn A</td>
-                            <td class="border px-4 py-2">B302</td>
-                        </tr>
-                        <tr>
-                            <td class="border px-4 py-2">Ba</td>
-                            <td class="border px-4 py-2">02/07/2024</td>
-                            <td class="border px-4 py-2">Cơ sở dữ liệu</td>
-                            <td class="border px-4 py-2">Trần Thị B</td>
-                            <td class="border px-4 py-2">B303</td>
-                        </tr>
-                        <tr>
-                            <td class="border px-4 py-2">Tư</td>
-                            <td class="border px-4 py-2">03/07/2024</td>
-                            <td class="border px-4 py-2">Mạng máy tính</td>
-                            <td class="border px-4 py-2">Lê Văn C</td>
-                            <td class="border px-4 py-2">B304</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h2 class="text-2xl font-bold mb-6 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Chương trình đào tạo</h2>
+            <div class="space-y-6">
+                <div class="border-b pb-4">
+                    <h3 class="text-xl font-semibold text-[#070b3b] mb-2">Cử nhân Công nghệ thông tin</h3>
+                    <p class="text-gray-600 mb-2">Thời gian đào tạo: 4 năm</p>
+                    <p class="text-gray-600 mb-2">Tổng số tín chỉ: 130 tín chỉ</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Kiến thức cơ sở ngành: 45 tín chỉ</li>
+                        <li>Kiến thức chuyên ngành: 45 tín chỉ</li>
+                        <li>Thực tập và đồ án tốt nghiệp: 10 tín chỉ</li>
+                        <li>Khóa luận tốt nghiệp: 10 tín chỉ</li>
+                    </ul>
+                </div>
+
+                <div class="border-b pb-4">
+                    <h3 class="text-xl font-semibold text-[#070b3b] mb-2">Thạc sĩ Công nghệ thông tin</h3>
+                    <p class="text-gray-600 mb-2">Thời gian đào tạo: 2 năm</p>
+                    <p class="text-gray-600 mb-2">Tổng số tín chỉ: 60 tín chỉ</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Kiến thức chuyên sâu: 30 tín chỉ</li>
+                        <li>Luận văn thạc sĩ: 30 tín chỉ</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-[#070b3b] mb-2">Tiến sĩ Công nghệ thông tin</h3>
+                    <p class="text-gray-600 mb-2">Thời gian đào tạo: 3-4 năm</p>
+                    <p class="text-gray-600 mb-2">Tổng số tín chỉ: 90 tín chỉ</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Học phần bắt buộc: 15 tín chỉ</li>
+                        <li>Học phần tự chọn: 15 tín chỉ</li>
+                        <li>Luận án tiến sĩ: 60 tín chỉ</li>
+                    </ul>
+                </div>
             </div>
         </div>
+
         <!-- Sidebar -->
         <div>
             <!-- Tin tiêu điểm -->
@@ -67,10 +65,10 @@
                 <div class="space-y-4">
                     <div class="flex gap-3">
                         <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                            <img src="/img/new1.jpg" alt="Tự chủ đại học" class="w-full h-full object-cover">
                         </a>
                         <div>
-                            <a href="#" class="block text-base font-medium hover:text-blue-600">Tự Chủ Đại Học: Cơ hội cho thực hiện cam kết \"100 cử nhân giỏi\"</a>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Tự Chủ Đại Học: Cơ hội cho thực hiện cam kết "100 cử nhân giỏi"</a>
                             <p class="text-gray-600 text-xs mt-1">
                                 <i class="fas fa-calendar-alt mr-1"></i>23/04/2022
                             </p>
@@ -78,7 +76,7 @@
                     </div>
                     <div class="flex gap-3">
                         <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                            <img src="/img/talk-bg2.jpg" alt="Chiến dịch làm sạch mã độc" class="w-full h-full object-cover">
                         </a>
                         <div>
                             <a href="#" class="block text-base font-medium hover:text-blue-600">Phát động Chiến dịch làm sạch mã độc trên không gian mạng</a>
@@ -89,10 +87,10 @@
                     </div>
                     <div class="flex gap-3">
                         <a href="#" class="block flex-shrink-0 w-24 h-24 overflow-hidden rounded">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="Tin tức" class="w-full h-full object-cover">
+                            <img src="/img/ai3.webp" alt="Chủ đề CNTT" class="w-full h-full object-cover">
                         </a>
                         <div>
-                            <a href="#" class="block text-base font-medium hover:text-blue-600">Chủ đề trong năm CNTT: \"Nhận thức và thực tiễn về ATM, Tài nguyên số\"</a>
+                            <a href="#" class="block text-base font-medium hover:text-blue-600">Chủ đề trong năm CNTT: "Nhận thức và thực tiễn về ATM, Tài nguyên số"</a>
                             <p class="text-gray-600 text-xs mt-1">
                                 <i class="fas fa-calendar-alt mr-1"></i>05/03/2022
                             </p>
@@ -100,6 +98,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Video giới thiệu -->
             <div class="mb-8">
                 <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Video giới thiệu</h2>
@@ -114,6 +113,7 @@
                     </a>
                 </div>
             </div>
+
             <!-- Thẻ tag -->
             <div>
                 <h2 class="text-2xl font-bold mb-4 text-[#070b3b] border-b-2 border-[#070b3b] pb-2">Chủ đề</h2>
