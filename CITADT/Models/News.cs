@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace CITADT.Models
 {
@@ -14,38 +15,44 @@ namespace CITADT.Models
         [StringLength(200)]
         public string Title { get; set; }
 
-        [StringLength(500)]
-        public string Summary { get; set; }
-
+        [Required]
         public string Content { get; set; }
 
-        [StringLength(200)]
-        public string Slug { get; set; }
+        public string? ImageUrl { get; set; }
 
         [StringLength(500)]
-        public string FeaturedImage { get; set; }
+        public string? Summary { get; set; }
+
+        [StringLength(200)]
+        public string? Slug { get; set; }
+
+        [StringLength(500)]
+        public string? FeaturedImage { get; set; }
 
         public bool IsFeatured { get; set; } = false;
 
-        public bool IsPublished { get; set; } = false;
+        public bool IsPublished { get; set; } = true;
 
         public DateTime? PublishedAt { get; set; }
 
         public int ViewCount { get; set; } = 0;
 
-        [ForeignKey("Category")]
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
 
-        [ForeignKey("User")]
-        public int AuthorId { get; set; }
+        [Required]
+        public string AuthorId { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         public DateTime? UpdatedAt { get; set; }
 
         // Navigation properties
-        public virtual Category Category { get; set; }
-        public virtual User Author { get; set; }
-        public virtual ICollection<NewsTag> NewsTags { get; set; }
+        [ForeignKey("CategoryId")]
+        public virtual Category? Category { get; set; }
+
+        [ForeignKey("AuthorId")]
+        public virtual IdentityUser Author { get; set; }
+
+        public virtual ICollection<NewsTag>? NewsTags { get; set; }
     }
 }

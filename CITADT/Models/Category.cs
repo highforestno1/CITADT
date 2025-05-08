@@ -13,11 +13,10 @@ namespace CITADT.Models
         [StringLength(100)]
         public string Name { get; set; }
 
-        [StringLength(500)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
-        [StringLength(100)]
-        public string Slug { get; set; }
+        [StringLength(450)]
+        public string? Slug { get; set; }
 
         public int? ParentId { get; set; }
 
@@ -29,7 +28,7 @@ namespace CITADT.Models
 
         public DateTime? UpdatedAt { get; set; }
 
-        // Navigation property
-        public virtual ICollection<News> News { get; set; }
+        // Navigation properties
+        public virtual ICollection<News>? News { get; set; }
     }
 } 
