@@ -93,7 +93,7 @@
         <!-- Hiển thị trên mobile -->
         <div class="text-center">
           <a href="/" target="_blank">
-            <h1 class="block md:hidden text-base font-bold text-red-600 text-xs uppercase tracking-tight">
+            <h1 class="block md:hidden text-base font-bold text-xs uppercase tracking-tight">
               TRUNG TÂM ỨNG DỤNG CÔNG NGHỆ THÔNG TIN<br>VÀ CHUYỂN ĐỔI SỐ
             </h1>
           </a>
@@ -165,15 +165,72 @@
       </div>
 
       <!-- Mobile navbar -->
-      <div id="mobile-menu" class="md:hidden hidden pb-4">
-        <a href="/Home/About" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Giới thiệu chung</p></a>
-        <a href="/Home/Organization" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Cơ cấu tổ chức</p></a>
-        <a href="/Home/Training" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Đào tạo</p></a>
-        <a href="/Home/TrainingProgramme" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Lịch học</p></a>
-        <a href="/Home/Student" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Sinh viên</p></a>
-        <a href="/Home/MiningGuide" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Hướng dẫn</p></a>
-        <a href="/Home/FAQ" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Câu hỏi thường gặp</p></a>
-        <a href="/Home/FormProcess" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Quy trình - Biểu mẫu</p></a>
+      <div id="mobile-menu" class="md:hidden hidden pb-4" x-data="{ 
+        aboutOpen: false,
+        trainingOpen: false,
+        studentOpen: false,
+        guideOpen: false
+      }">
+        <!-- Giới thiệu Group -->
+        <div class="border-b border-gray-200">
+          <button @@click="aboutOpen = !aboutOpen" class="w-full flex justify-between items-center py-2 hover:bg-gray-100 uppercase font-medium">
+            <p class="text-[#252525]">Giới thiệu</p>
+            <svg :class="{'rotate-180': aboutOpen}" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="aboutOpen" x-transition class="pl-4">
+            <a href="/Home/About" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Giới thiệu chung</p></a>
+            <a href="/Home/Organization" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Cơ cấu tổ chức</p></a>
+          </div>
+        </div>
+
+        <!-- Đào tạo Group -->
+        <div class="border-b border-gray-200">
+          <button @@click="trainingOpen = !trainingOpen" class="w-full flex justify-between items-center py-2 hover:bg-gray-100 uppercase font-medium">
+            <p class="text-[#252525]">Đào tạo</p>
+            <svg :class="{'rotate-180': trainingOpen}" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="trainingOpen" x-transition class="pl-4">
+            <a href="/Home/Training" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Chương trình đào tạo</p></a>
+            <a href="/Home/TrainingProgramme" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Kế hoạch đào tạo</p></a>
+          </div>
+        </div>
+
+        <!-- Sinh viên Group -->
+        <div class="border-b border-gray-200">
+          <button @@click="studentOpen = !studentOpen" class="w-full flex justify-between items-center py-2 hover:bg-gray-100 uppercase font-medium">
+            <p class="text-[#252525]">Sinh viên</p>
+            <svg :class="{'rotate-180': studentOpen}" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="studentOpen" x-transition class="pl-4">
+            <a href="/Home/Student" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Tra cứu sinh viên</p></a>
+            <a href="/Home/Certificate" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Tra cứu chứng chỉ</p></a>
+          </div>
+        </div>
+
+        <!-- Hướng dẫn Group -->
+        <div class="border-b border-gray-200">
+          <button @@click="guideOpen = !guideOpen" class="w-full flex justify-between items-center py-2 hover:bg-gray-100 uppercase font-medium">
+            <p class="text-[#252525]">Hướng dẫn</p>
+            <svg :class="{'rotate-180': guideOpen}" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="guideOpen" x-transition class="pl-4">
+            <a href="/Home/MiningGuide" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Hướng dẫn sử dụng</p></a>
+            <a href="/Home/FAQ" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Câu hỏi thường gặp</p></a>
+          </div>
+        </div>
+
+        <!-- Quy trình - Biểu mẫu (không có submenu) -->
+        <div class="border-b border-gray-200">
+          <a href="/Home/FormProcess" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Quy trình - Biểu mẫu</p></a>
+        </div>
       </div>
     </div>
   </header>
@@ -349,17 +406,35 @@
     // Scroll to top button functionality
     document.addEventListener('DOMContentLoaded', function () {
       const scrollTopButton = document.getElementById('scrollTopButton');
+      let isMobile = window.matchMedia('(max-width: 1023px)').matches;
 
-      // Show/hide button based on scroll position
-      window.addEventListener('scroll', function () {
-        if (window.scrollY > 300) {
-          scrollTopButton.classList.remove('hidden');
-          scrollTopButton.classList.add('fade-in');
+      function updateScrollTopButton() {
+        if (isMobile) {
+          if (window.scrollY === 0) {
+            scrollTopButton.classList.add('hidden');
+            scrollTopButton.classList.remove('fade-in');
+          } else {
+            scrollTopButton.classList.remove('hidden');
+            scrollTopButton.classList.add('fade-in');
+          }
         } else {
-          scrollTopButton.classList.add('hidden');
-          scrollTopButton.classList.remove('fade-in');
+          if (window.scrollY > 300) {
+            scrollTopButton.classList.remove('hidden');
+            scrollTopButton.classList.add('fade-in');
+          } else {
+            scrollTopButton.classList.add('hidden');
+            scrollTopButton.classList.remove('fade-in');
+          }
         }
+      }
+
+      window.addEventListener('scroll', updateScrollTopButton);
+      window.addEventListener('resize', function () {
+        isMobile = window.matchMedia('(max-width: 1023px)').matches;
+        updateScrollTopButton();
       });
+      // Đảm bảo nút hiển thị đúng ngay khi load
+      updateScrollTopButton();
 
       // Scroll to top when button is clicked
       scrollTopButton.addEventListener('click', function (e) {
@@ -377,22 +452,27 @@
     .fade-in {
       animation: fadeIn 0.3s ease-in-out;
     }
-    
     @@keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    
     #scrollTopButton button {
       transition: transform 0.3s ease;
     }
-    
     #scrollTopButton button:hover {
       transform: translateY(-5px);
     }
-    
     #scrollTopButton button:active {
       transform: scale(0.95);
+    }
+    /* Luôn treo ở góc phải dưới màn hình trên mobile */
+    @@media (max-width: 1023px) {
+      #scrollTopButton {
+        position: fixed !important;
+        right: 1.25rem !important; /* 20px */
+        bottom: 1.25rem !important; /* 20px */
+        z-index: 9999;
+      }
     }
   </style>
 
