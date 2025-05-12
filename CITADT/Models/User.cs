@@ -35,6 +35,8 @@ namespace CITADT.Models
 
         public DateTime? UpdatedAt { get; set; }
 
+        public string Role { get; set; } = "Admin";
+
         // Navigation property for News
         public virtual ICollection<News> News { get; set; }
     }

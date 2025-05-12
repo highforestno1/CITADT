@@ -1,73 +1,103 @@
+@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Admin Dashboard</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - CITADT Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body>
-    <div class="d-flex">
+<body class="bg-gray-100">
+    <div class="min-h-screen flex">
         <!-- Sidebar -->
-        <div class="bg-dark text-white" style="width: 250px; min-height: 100vh;">
-            <div class="p-3">
-                <h3 class="text-center">Admin Panel</h3>
-                <hr />
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" asp-area="Admin" asp-controller="News" asp-action="Index">
-                            <i class="bi bi-newspaper"></i> News
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" asp-area="Admin" asp-controller="Notification" asp-action="Index">
-                            <i class="bi bi-bell"></i> Notifications
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" asp-area="Admin" asp-controller="Category" asp-action="Index">
-                            <i class="bi bi-tags"></i> Categories
-                        </a>
-                    </li>
-                    <li class="nav-item mt-3">
-                        <a class="nav-link text-white" asp-controller="Account" asp-action="Logout">
-                            <i class="bi bi-box-arrow-right"></i> Logout
-                        </a>
-                    </li>
-                </ul>
+        <div id="sidebar" class="bg-white w-64 min-h-screen shadow-lg fixed left-0 top-0 z-40 transform transition-transform duration-300 ease-in-out -translate-x-full md:translate-x-0">
+            <div class="p-4">
+               <a href="/Admin"><p class="text-2xl font-bold text-gray-800">CITADT Admin</p> </a>
             </div>
+            <nav class="mt-4">
+                <a href="/Admin" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 @(currentAction == "Index" ? "bg-gray-100 border-r-4 border-blue-500" : "")">
+                    <i class="bi bi-speedometer2 mr-3"></i>
+                    Trang chủ
+                </a>
+                <a href="/Admin/Users" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 @(currentAction == "Users" ? "bg-gray-100 border-r-4 border-blue-500" : "")">
+                    <i class="bi bi-people mr-3"></i>
+                    Người dùng
+                </a>
+                <a href="/Admin/News" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 @(currentAction == "News" ? "bg-gray-100 border-r-4 border-blue-500" : "")">
+                    <i class="bi bi-newspaper mr-3"></i>
+                    Tin tức
+                </a>
+                <a href="/Admin/Categories" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 @(currentAction == "Categories" ? "bg-gray-100 border-r-4 border-blue-500" : "")">
+                    <i class="bi bi-tags mr-3"></i>
+                    Danh mục
+                </a>
+                <a href="/Admin/Settings" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 @(currentAction == "Settings" ? "bg-gray-100 border-r-4 border-blue-500" : "")">
+                    <i class="bi bi-gear mr-3"></i>
+                    Cài đặt
+                </a>
+              
+
+            </nav>
         </div>
 
         <!-- Main Content -->
-        <div class="flex-grow-1">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
-                                    <i class="bi bi-house"></i> View Site
-                                </a>
-                            </li>
-                        </ul>
+        <div class="flex-1 md:ml-64">
+            <!-- Top Navigation -->
+            <div class="bg-white shadow-sm">
+                <div class="flex justify-between items-center px-6 py-4">
+                    <div class="flex items-center">
+                        <button id="mobileSidebarToggle" class="mr-3 text-gray-600 md:hidden">
+                            <i class="bi bi-list text-2xl"></i>
+                        </button>
+                        <h2 class="text-xl font-semibold text-gray-800">@ViewData["Title"]</h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 hidden sm:inline">Chào mừng, Admin</span>
+                        <form asp-controller="Admin" asp-action="Logout" method="post" class="inline">
+                            <button type="submit" class="text-red-600 hover:text-red-800">
+                                <i class="bi bi-box-arrow-right"></i> <span class="hidden sm:inline">Đăng xuất</span>
+                            </button>
+                        </form>
                     </div>
                 </div>
-            </nav>
-
-            <div class="container-fluid p-4">
-                @RenderBody()
             </div>
+
+            <!-- Page Content -->
+            <main>
+                @RenderBody()
+            </main>
         </div>
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        // Mobile sidebar toggle
+        document.getElementById('mobileSidebarToggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('-translate-x-full');
+        });
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
+            
+            if (window.innerWidth < 768 && 
+                !sidebar.contains(event.target) && 
+                event.target !== mobileSidebarToggle &&
+                !mobileSidebarToggle.contains(event.target)) {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html> 

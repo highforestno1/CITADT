@@ -1,0 +1,90 @@
+@model CITADT.Models.CreateUserViewModel
+@{
+    ViewData["Title"] = "Thêm người dùng mới";
+    Layout = "_AdminLayout";
+}
+
+<div class="p-4 md:p-6">
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">Thêm người dùng mới</h1>
+        <a href="/Admin/Users" class="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-200 flex items-center">
+            <i class="bi bi-arrow-left mr-2"></i>Quay lại
+        </a>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-4 md:p-6 max-w-3xl mx-auto">
+        <form asp-action="CreateUser" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-red-500 mb-4"></div>
+
+            <div class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label asp-for="Email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input asp-for="Email" type="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200" />
+                        <span asp-validation-for="Email" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="FullName" class="block text-sm font-medium text-gray-700">Họ tên</label>
+                        <input asp-for="FullName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200" />
+                        <span asp-validation-for="FullName" class="text-red-500 text-sm"></span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label asp-for="Password" class="block text-sm font-medium text-gray-700">Mật khẩu</label>
+                        <input asp-for="Password" type="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 transition-colors duration-200" />
+                        <span asp-validation-for="Password" class="text-red-500 text-sm"></span>
+                        <p class="text-gray-500 text-xs mt-1">Tối thiểu 6 ký tự, ít nhất 1 chữ hoa, 1 chữ thường và 1 số</p>
+                    </div>
+
+                    <div>
+                        <label asp-for="ConfirmPassword" class="block text-sm font-medium text-gray-700">Xác nhận mật khẩu</label>
+                        <input asp-for="ConfirmPassword" type="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 transition-colors duration-200" />
+                        <span asp-validation-for="ConfirmPassword" class="text-red-500 text-sm"></span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label asp-for="PhoneNumber" class="block text-sm font-medium text-gray-700">Số điện thoại</label>
+                        <input asp-for="PhoneNumber" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200" />
+                        <span asp-validation-for="PhoneNumber" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="Role" class="block text-sm font-medium text-gray-700">Vai trò</label>
+                        <select asp-for="Role" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200">
+                            <option value="">-- Chọn vai trò --</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Editor">Biên tập viên</option>
+                            <option value="User">Người dùng</option>
+                        </select>
+                        <span asp-validation-for="Role" class="text-red-500 text-sm"></span>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <input asp-for="IsActive" class="rounded text-blue-500 focus:ring-blue-500" checked />
+                    <label asp-for="IsActive" class="ml-2 block text-sm text-gray-700">Kích hoạt tài khoản</label>
+                </div>
+
+                <div class="border-t border-gray-200 pt-5">
+                    <div class="flex justify-end">
+                        <a href="/Admin/Users" class="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors duration-200 mr-4">
+                            Hủy
+                        </a>
+                        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105">
+                            <i class="bi bi-person-plus mr-2"></i>Tạo người dùng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 
