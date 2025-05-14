@@ -135,17 +135,18 @@
               <a href="/Home/TrainingProgramme" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Kế hoạch đào tạo</p></a>
             </div>
           </div>
-          <div class="relative group">
-            <a href="/Home/Student"
+          
+            <div class="relative group">
+            <a href="/Home/News"
               class="flex items-center py-2 uppercase font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
-              <p class="text-[#252525] group-hover:text-blue-500 transition-colors">Sinh viên</p>
+              <p class="text-[#252525] group-hover:text-blue-500 transition-colors">Tin tức</p>
               <img src="/img/dropdown.png" alt="Dropdown" class="ml-1 w-3">
             </a>
             <div class="absolute hidden group-hover:block bg-white shadow-md pl-2 pr-2 pt-2 z-10 min-w-40">
-              <a href="/Home/Student" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Tra cứu sinh viên</p></a>
-              <a href="/Home/Certificate" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Tra cứu chứng chỉ</p></a>
-            </div>
+              <a href="/Home/News" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Tin tức</p></a>
+               </div>
           </div>
+
           <div class="relative group">
             <a href="/Home/MiningGuide"
               class="flex items-center py-2 uppercase font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
@@ -157,6 +158,9 @@
               <a href="/Home/FAQ" class="block uppercase hover:bg-blue-200 transition-colors -mx-2 px-2 h-10 flex items-center"><p class="text-[#252525] font-bold whitespace-nowrap">Câu hỏi thường gặp</p></a>
             </div>
           </div>
+
+        
+
           <a href="/Home/FormProcess"
             class="py-2 uppercase font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
             <p class="text-[#252525] hover:text-blue-500 transition-colors">Quy trình - Biểu mẫu</p>
@@ -165,10 +169,10 @@
       </div>
 
       <!-- Mobile navbar -->
-      <div id="mobile-menu" class="md:hidden hidden pb-4" x-data="{ 
+      <div id="mobile-menu" class="md:hidden hidden pb-4" x-data="{
         aboutOpen: false,
         trainingOpen: false,
-        studentOpen: false,
+        newsOpen: false,
         guideOpen: false
       }">
         <!-- Giới thiệu Group -->
@@ -199,18 +203,19 @@
           </div>
         </div>
 
-        <!-- Sinh viên Group -->
+        <!-- Tin tức Group -->
         <div class="border-b border-gray-200">
-          <button @@click="studentOpen = !studentOpen" class="w-full flex justify-between items-center py-2 hover:bg-gray-100 uppercase font-medium">
-            <p class="text-[#252525]">Sinh viên</p>
-            <svg :class="{'rotate-180': studentOpen}" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button @@click="newsOpen = !newsOpen" class="w-full flex justify-between items-center py-2 hover:bg-gray-100 uppercase font-medium">
+            <p class="text-[#252525]">Tin tức</p>
+            <svg :class="{'rotate-180': newsOpen}" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div x-show="studentOpen" x-transition class="pl-4">
-            <a href="/Home/Student" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Tra cứu sinh viên</p></a>
-            <a href="/Home/Certificate" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Tra cứu chứng chỉ</p></a>
+          <div x-show="newsOpen" x-transition class="pl-4">
+            <a href="/Home/News" class="block py-2 hover:bg-gray-100 uppercase font-medium"><p class="text-[#252525]">Tin tức</p></a>
           </div>
+        </div>
+        <div class="border-b border-gray-200">
         </div>
 
         <!-- Hướng dẫn Group -->
@@ -357,6 +362,7 @@
 
               <div class="flex items-center space-x-4">
                 <div class="flex items-center space-x-2">
+
                   <a href="https://www.facebook.com/HaiPhongUniversity"
                     class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#0071dc] transition-colors">
                     <img src="/img/facebook.png" alt="Facebook" class="w-10">
